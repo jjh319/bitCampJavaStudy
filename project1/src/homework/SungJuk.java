@@ -4,7 +4,7 @@ package homework;
 public class SungJuk {
 
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) { // 성적 계산 문제
 		
 		
 		String name = "L";

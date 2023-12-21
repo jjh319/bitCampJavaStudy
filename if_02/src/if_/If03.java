@@ -27,13 +27,13 @@ public class If03 {
 				System.out.println(a + " " + c + " " + b);
 			} // if-else if
 			
-		} else if(b < a && b < c) {
+		} else if( b < c) {
 			if(a < c) {
 				System.out.println(b + " " + a + " " + c);
 			} else if(c < a) {
 				System.out.println(b + " " + c + " " + a);
 			} // if-else if
-		} else if(c < a && c < b) {
+		} else {
 			if(a < b) {
 				System.out.println(c + " " + a + " " + b);
 			} else if(b < a) {

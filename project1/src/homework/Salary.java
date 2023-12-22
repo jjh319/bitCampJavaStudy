@@ -12,6 +12,8 @@ public class Salary {
 		int sum;    // 합계
 		int segum;  // 세금
 		
+		DecimalFormat df = new DecimalFormat();
+		
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -31,17 +33,17 @@ public class Salary {
 		
 		System.out.println("*** " + name + " " + depart + " 월급 ***");
 		
-		System.out.println("기본급 : " + new DecimalFormat().format(gMoney) );
-		System.out.println("수당 : " + new DecimalFormat().format(nMoney) );
+		System.out.println("기본급 : " +df.format(gMoney) );
+		System.out.println("수당 : " + df.format(nMoney) );
 		
 		sum = gMoney + nMoney;
-		System.out.println("합계 : " + new DecimalFormat().format(sum) );
+		System.out.println("합계 : " +df.format(sum) );
 		
 		segum = (int) ( sum >= 5000000 ? sum*0.03 : ( sum >= 3000000 ? (sum*0.02) : (sum*0.01) ) );
-		System.out.println("세금 : " + new DecimalFormat().format(segum) );
+		System.out.println("세금 : " +df.format(segum) );
 		
 		salary = sum - segum;
-		System.out.println("월급 : " + new DecimalFormat().format(salary));
+		System.out.println("월급 : " + df.format(salary));
 
 	} // main
 

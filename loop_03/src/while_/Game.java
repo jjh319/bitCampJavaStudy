@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Game {
 
 	
-	public static void main(String[] args) { // 게임 문제
+	public static void main(String[] args) { // 게임
 		
 		Scanner sc = new Scanner(System.in);
 		

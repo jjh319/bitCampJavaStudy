@@ -44,6 +44,8 @@ public class Switch02 {
 		
 	} // main
 
+	
+	
 } // end class
 
 
@@ -71,3 +73,5 @@ public class Switch02 {
 	연산자 error
 
 */
+
+

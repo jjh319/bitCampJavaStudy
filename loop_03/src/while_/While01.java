@@ -19,6 +19,26 @@ public class While01 {
 			i++;
 			
 		} // while
+		System.out.println();
+		
+		int j=0;
+		while(j<10) {
+			j++;
+			
+			System.out.print(j + "  ");
+		} // while
+		System.out.println();
+		
+		
+		int k = 0;
+		while(true) { // 무한루프 , for(;;)
+			k++;
+			
+			System.out.print(k + "  ");
+			
+			if(k == 10) { break; }
+		} // while
+		
 
 	} // main
 

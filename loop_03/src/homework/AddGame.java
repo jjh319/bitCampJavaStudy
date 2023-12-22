@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class AddGame {
 
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) { // 덧셈 계산 게임
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -42,13 +42,14 @@ public class AddGame {
 						
 						case 0 :
 							System.out.println("틀렸다. 정답은" + (a+b) );
+							cnt = 2;
 							break;
 					} // switch
 					
 					
 					} // if-else if
 				
-				if(cnt == 0) {
+				if(cnt == 2) {
 					break;
 				} // if
 					
@@ -59,8 +60,16 @@ public class AddGame {
 			} // for
 			
 			System.out.println("당신은 총 " + num + "문제를 맞추어서 점수 " + score + "점 입니다.");
+			System.out.println();
 			
+			System.out.print("또 할래?(Y/N) : ");
+			String play = sc.next();
 			
+			if(play == "y" || play == "Y") {
+				return;
+			} else if(play == "n" || play == "N") {
+				break;
+			} // if-else if
 			
 			
 		} // while

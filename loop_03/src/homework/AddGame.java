@@ -1,11 +1,69 @@
 package homework;
 
+import java.util.Scanner;
 
 public class AddGame {
 
 	
 	public static void main(String[] args) {
 		
+		Scanner sc = new Scanner(System.in);
+		
+		boolean life = true;
+		int num = 0; // 맞춘 문제 수
+		int cnt = 2; // 기회
+		int score = 0; // 점수
+		
+		while(life) {
+			
+			for(int i=0; i<5; i++) {
+				int a = (int) ( Math.random() * 90 + 10 );
+				int b = (int) ( Math.random() * 90 + 10 );
+				
+				
+				while(true) {
+					
+				System.out.print(a + " + " + b + " = ");
+				int sum = sc.nextInt();
+				
+				if(a + b == sum) {
+					System.out.println("딩동댕!");
+					num++;
+					score += 20;
+					break;
+				} else if (a + b != sum) {
+					
+					cnt--;
+					
+					switch(cnt) {
+						case 1 :
+							System.out.println("틀렸다.");
+							break;
+						
+						case 0 :
+							System.out.println("틀렸다. 정답은" + (a+b) );
+							break;
+					} // switch
+					
+					
+					} // if-else if
+				
+				if(cnt == 0) {
+					break;
+				} // if
+					
+					
+				} // inner while
+				
+				
+			} // for
+			
+			System.out.println("당신은 총 " + num + "문제를 맞추어서 점수 " + score + "점 입니다.");
+			
+			
+			
+			
+		} // while
 		
 		
 	} // main

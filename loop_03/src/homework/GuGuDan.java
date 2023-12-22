@@ -6,7 +6,24 @@ public class GuGuDan {
 	
 	public static void main(String[] args) {
 		
+		for(int i=1; i<4; i++) {
+			
+			for(int x=1; x<10; x++) {
+				
+				for(int y= 3 * i -1; y<3*i+2; y++ ) { // i == 1일때  x가 1일때 y = 3*1-1 이므로 2부터 시작 후 3*1+2 = 5이므로 4까지 수행
+					
+					if(y == 10) {  // 10단은 없으므로 제한
+						break;
+					} // if
 		
+					System.out.print(y + " x " + x + " = " + (x*y) + "\t");  // x가 1일때  y 2~4까지 수행 후 16번째줄 수행후 x + 1 증가 후 다시 
+																			 // y 2~4까지 수행 - 이렇게 x를 9까지 수행 후 i + 1 증가
+			
+				} // for             
+				System.out.println();
+			} // for
+			System.out.println();
+		} // for
 
 	} // main
 

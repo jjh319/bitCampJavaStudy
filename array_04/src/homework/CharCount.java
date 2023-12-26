@@ -6,6 +6,36 @@ public class CharCount {
 	
 	public static void main(String[] args) {
 		
+		char[] ar = new char[50];
+		
+		
+		
+		for(int k=0; k<5; k++) {
+			
+			for(int i=0; i<10; i++) {
+				// k*10 : 행 , i : 행의 시작 열
+				ar[k * 10 + i] = (char) (Math.random() *26 + 'A');
+				System.out.print(ar[k * 10 + i] + "  ");
+				
+			} // for
+		System.out.println();
+		} // for
+		
+			
+		// 각 문자의 개수 세기
+        int[] count = new int[26]; // 알파벳 26개 A ~ Z까지의 인덱스 0 ~ 25 , B의 인덱스1
+
+        for (char a : ar) {
+            count[a - 'A']++; // ex) a의 값에 B가 들어오면 'B' - 'A' = 66 - 65 = 1이므로
+        }                     // B가 1 증가하도록 설계
+
+        // 개수 출력
+        // i가 0이면, ch는 'A'가 되고, count[0]은 'A'의 발생 횟수를 나타냄.
+        for (int i = 0; i < count.length; i++) { 
+            char ch = (char) ('A' + i);
+            System.out.println(ch + "의 갯수 : " + count[i]);
+        }
+		
 
 	} // main
 

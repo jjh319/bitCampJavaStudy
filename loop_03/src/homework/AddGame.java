@@ -21,6 +21,10 @@ public class AddGame {
 				int b = (int) ( Math.random() * 90 + 10 );
 				
 				
+				if(cnt <= 1) { // 기회 초기화
+					cnt = 2;
+				} // if
+				
 				while(true) {
 					
 				System.out.print(a + " + " + b + " = ");

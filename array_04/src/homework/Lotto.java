@@ -9,7 +9,7 @@ public class Lotto {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int[] lotto = new int[6];
+		
 		boolean play = true;
 		
 		while(play) {
@@ -24,21 +24,23 @@ public class Lotto {
 			
 			for(int k=0; k< (money / 1000); k++) { // 구매 횟수
 			
+				int[] lotto = new int[6];
+				
 				for(int i=0; i<lotto.length; i++) {  // 중복 숫자 제거
-					int randomNum = (int) (Math.random() * 44 + 1);
+					lotto[i] = (int) (Math.random() * 45 + 1);
 					
 					for(int j=0; j<i; j++) {
 						
-						if(lotto[j] == randomNum ) {
+						if(lotto[i] == lotto[j] ) {
 							i--;
 							break;
 						} // if
-						
+							
 					} // inner for
 					
-					lotto[i] = randomNum;		
 					
 				} // 중복제거 for
+				
 				
 				for(int i=0; i<lotto.length-1; i++) {  // 뽑은 숫자 오름차순 정렬
 					for(int j=i+1; j<lotto.length; j++) {

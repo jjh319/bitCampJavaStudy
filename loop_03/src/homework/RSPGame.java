@@ -18,6 +18,8 @@ public class RSPGame {
 	      
 	      while(money >= 0) {
 	         
+	    	  cnt = 0; // 다시 시작 시 이긴 횟수 초기화
+	    	  
 	         // 가위(1) 바위(2) 보자기(3) , 무승부시 패배처리
 	         int a = (int) (Math.random() * 3 + 1); 
 	         

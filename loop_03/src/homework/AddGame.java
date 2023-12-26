@@ -16,6 +16,8 @@ public class AddGame {
 		
 		while(life) {
 			
+			score = 0; // 다시 시작 시 점수 초기화
+			
 			for(int i=0; i<5; i++) {
 				int a = (int) ( Math.random() * 90 + 10 );
 				int b = (int) ( Math.random() * 90 + 10 );

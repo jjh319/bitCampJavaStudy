@@ -25,7 +25,7 @@ public class Array03 {
 		int sum = 0;
 		
 		for(int a : ar) {
-			sum = sum+a;
+			sum = sum + a;
 			
 		} // enhanced for
 		System.out.println("배열의 총 합 : " + sum );

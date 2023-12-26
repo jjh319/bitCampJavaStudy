@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class AddGame {
 
 	
-	public static void main(String[] args) { // 덧셈 계산 게임
+	public static void main(String[] args) { // 덧셈 계산 게임 , 커밋 오류 테스트
 		
 		Scanner sc = new Scanner(System.in);
 		

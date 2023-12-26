@@ -35,6 +35,13 @@ public class Array01 {
 			} // if
 			
 		} // for
+		System.out.println();
+		
+		System.out.println("확장 for문");
+		for(int list : ar) {
+			System.out.println(list);
+		} // enhanced for
+		
 		
 	} // main
 

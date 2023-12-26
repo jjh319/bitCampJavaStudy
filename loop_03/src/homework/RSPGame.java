@@ -18,7 +18,6 @@ public class RSPGame {
 	      
 	      while(money >= 0) {
 	         
-	    	  cnt = 0; // 다시 시작 시 이긴 횟수 초기화
 	    	  
 	         // 가위(1) 바위(2) 보자기(3) , 무승부시 패배처리
 	         int a = (int) (Math.random() * 3 + 1); 
@@ -114,6 +113,7 @@ public class RSPGame {
 	               System.out.print("insert coin : ");
 	               int life = sc.nextInt();
 	               money = life;
+	               cnt = 0; // 다시 시작 시 이긴 횟수 초기화
 	               break;
 	            } else {
 	               System.out.println("Y(y) 또는 N(n) 만 입력하세요.");

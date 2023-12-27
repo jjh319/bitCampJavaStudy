@@ -11,10 +11,28 @@ public class MultiArray02 {
 		int[][] ar = new int[10][10];
 		
 		// 입력
+//		for(int i=0; i<ar.length; i++) {
+//			for(int j=0; j<ar[i].length; j++) {
+//				ar[i][j] = num;
+//				num++;
+//			} // inner for
+//			
+//		} // for
+		
+		// 입력
+//		for(int i=0; i<ar.length; i++) {
+//			for(int j=0; j<ar[i].length; j++) {
+//				ar[j][i] = num;
+//				num++;
+//			} // inner for
+//					
+//		} // for
+		
+		num = 100;
 		for(int i=0; i<ar.length; i++) {
 			for(int j=0; j<ar[i].length; j++) {
-				ar[i][j] = num;
-				num++;
+				ar[j][i] = num;
+				num--;
 			} // inner for
 			
 		} // for
@@ -22,7 +40,7 @@ public class MultiArray02 {
 		// 출력
 		for(int i=0; i<ar.length; i++) {
 			for(int j=0; j<ar[i].length; j++) {
-				System.out.print(String.format("%5d", ar[i][j]));
+				System.out.print(String.format("%-5d", ar[i][j]));
 			} // inner for
 			System.out.println();
 		} // for

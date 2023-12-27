@@ -34,7 +34,7 @@ public class CharCount {
         for (int i = 0; i < count.length; i++) { 
             char ch = (char) ('A' + i);
             System.out.println(ch + "의 갯수 : " + count[i]);
-        }
+        } // for
 		
 
 	} // main

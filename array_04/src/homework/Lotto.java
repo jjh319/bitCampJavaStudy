@@ -60,7 +60,7 @@ public class Lotto {
 				} // if
 				
 				for(int i=0; i<lotto.length; i++) {
-					System.out.print(lotto[i] + "  ");
+					System.out.print(String.format("%-4d", lotto[i] ) );
 				} // for
 			System.out.println();
 			

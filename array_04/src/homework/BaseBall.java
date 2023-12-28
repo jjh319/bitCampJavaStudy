@@ -46,10 +46,7 @@ public class BaseBall {
 	            } // for
 	            
 	            
-	            break;
-	         } // inner while
-	         
-	         while(true) {
+	          
 	            
 	            System.out.print("중복되지 않는 3자리 수(1~9) : ");
 	            String number = sc.next();
@@ -77,9 +74,9 @@ public class BaseBall {
 	            for(int i=0; i<ar.length; i++) {
 	               for(int j=0; j<ar.length; j++) {
 	                  if(input[i] == ar[j]) {
-	                     if(i == j) {
+	                     if(input.equals(input[i]) == ar.equals(ar[j])) {
 	                        strike++;
-	                     } else {
+	                     } else if(input.equals(input[i]) != ar.equals(ar[j])) {
 	                        ball++;
 	                     } // inner if-else
 	                     

@@ -74,9 +74,9 @@ public class BaseBall {
 	            for(int i=0; i<ar.length; i++) {
 	               for(int j=0; j<ar.length; j++) {
 	                  if(input[i] == ar[j]) {
-	                     if(input.equals(input[i]) == ar.equals(ar[j])) {
+	                     if(i == j) {
 	                        strike++;
-	                     } else if(input.equals(input[i]) != ar.equals(ar[j])) {
+	                     } else {
 	                        ball++;
 	                     } // inner if-else
 	                     

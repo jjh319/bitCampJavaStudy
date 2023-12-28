@@ -71,11 +71,6 @@ public class SungJuk {
 				for(int j=i; j<i+1; j++) {
 					avg[i] = (double) sum[i] / subjectCnt; 
 				} // for
-			
-			
-				System.out.println(Arrays.deepToString(subject));
-				System.out.println(Arrays.deepToString(jumsu));
-				System.out.println(Arrays.toString(name));
 				
 				
 				if(cnt == num) {

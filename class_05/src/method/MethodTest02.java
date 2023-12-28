@@ -5,6 +5,7 @@ public class MethodTest02 {
 	
 	
 	public static void main(String[] args) {
+		//호출
 		MethodTest02 m = new MethodTest02();
 		
 		System.out.println("합 = " + m.sum(25,36) );
@@ -31,9 +32,9 @@ public class MethodTest02 {
 		return a * b;
 	} // mul
 	
-	public int div(int a, int b) { // 몫
+	public String div(int a, int b) { // 몫
 		
-		return a / b;
+		return String.format( ("%.2f") ,(double) a / b);
 	} // div
 	
 	

@@ -1,24 +1,135 @@
 package homework;
 
+import java.util.Scanner;
 
 public class MemberService {
 
 	private MemberDTO[] ar = new MemberDTO[5];
 	
+	Scanner sc = new Scanner(System.in);
 	
 	public void menu() {
+		System.out.println("****************");
+		System.out.println("1. 가입");
+		System.out.println("2. 출력");
+		System.out.println("3. 수정");
+		System.out.println("4. 탈퇴");
+		System.out.println("5. 끝내기");
+		System.out.println("****************");
+		
+		System.out.print("번호 : ");
+		int num = sc.nextInt();
+		
+		boolean end = true;
+		
+		if(num == 1) {
+			insert();
+		} else if(num == 2) {
+			list();
+		} else if(num == 3) {
+			update();
+		} else if(num == 4) {
+			delete();
+		} else if(num == 5) {
+			end = false;
+		} // if-else if
 		
 	} // menu
 	
 	public void insert() {
 		
+		while(true) {
+			
+			for(int i=0; i<ar.length; i++) {
+				
+				if(ar[i] == null) {
+					MemberDTO dto = new MemberDTO();
+					
+					System.out.print("이름 입력 : ");
+					String name = sc.next();
+					
+					dto.setName(name);
+					
+					System.out.print("나이 입력 : ");
+					int age = sc.nextInt();
+					
+					dto.setAge(age);
+					
+					System.out.print("폰번호 입력 : ");
+					String phoneNumber = sc.next();
+					
+					dto.setPhoneNumber(phoneNumber);
+					
+					System.out.print("주소 입력 : ");
+					String juso = sc.next();
+					
+					dto.setJuso(juso);
+					System.out.println();
+					
+					ar[i] = dto;
+					System.out.println("1 row created!");
+					
+					break;
+					
+				} else {
+					System.out.println("5명의 정원이 꽉 찼습니다..");
+				} // if-else
+				
+			} // for
+			
+			break;
+			
+		} // while
+		
 	} // insert
 	
 	public void list() {
 		
+		System.out.println("이름\t나이\t폰번호\t주소");
+		for(int i=0; i<ar.length; i++) {
+			System.out.println(ar[i].getName() + "\t" + ar[i].getAge() + "\t" +
+					           ar[i].getPhoneNumber() + "\t" +
+					           ar[i].getJuso()
+					);
+		} // for
+		
 	} // list
 	
 	public void update() {
+		MemberDTO dto = new MemberDTO();
+		
+		System.out.print("폰번호 입력 : ");
+		String phoneNumber = sc.next();
+		
+		for(int i=0; i<ar.length; i++) {
+			
+			if(ar[i].getPhoneNumber() == phoneNumber) {
+				System.out.println(ar[i].getName() + "\t" + ar[i].getAge() + "\t" +
+				           ar[i].getPhoneNumber() + "\t" +
+				           ar[i].getJuso()
+				);
+				
+				System.out.print("수정할 이름 입력 : ");
+				String name = sc.next();
+				
+				System.out.print("수정할 폰번호 입력 : ");
+				String phoneNum = sc.next();
+				
+				System.out.print("수정할 주소 입력 : ");
+				String juso = sc.next();
+				
+				dto.setName(name);
+				dto.setPhoneNumber(phoneNumber);
+				dto.setJuso(juso);
+				
+				ar[i] = dto;
+				
+				break;
+				
+			} // if
+			
+			
+		} // for
 		
 	} // update
 	

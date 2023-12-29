@@ -3,6 +3,45 @@ package homework;
 
 public class MemberDTO {
 
+	private String name;  // 이름
+	private int age;  // 나이
+	private String phoneNumber;  // 폰번호
+	private String juso;  // 주소
+	
+	
+	
+	public String getName() {
+		return this.name;
+	} // getName
+	
+	public void setName(String name) {
+		this.name = name;
+	} // setName
+	
+	public int getAge() {
+		return this.age;
+	} // getAge
+	
+	public void setAge(int age) {
+		this.age = age;
+	} // setAge
+	
+	public String getPhoneNumber() {
+		return this.phoneNumber;
+	} // getPhoneNumber
+	
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	} // setPhoneNumber
+	
+	public String getJuso() {
+		return this.juso;
+	} // getJuso
+	
+	public void setJuso(String juso) {
+		this.juso = juso;
+	} // setJuso
+	
 	
 } // end class
 

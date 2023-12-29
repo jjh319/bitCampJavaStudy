@@ -1,12 +1,34 @@
 package homework;
 
-
+import java.util.Scanner;
 
 public class ExamMain {
 
 	
 	public static void main(String[] args) {
 		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("인원수 입력 : ");
+		int num = sc.nextInt();
+		
+		Exam[] exams = new Exam[num];
+		
+		for(int i=0; i<num; i++) {
+			exams[i] = new Exam();
+		} // for
+		
+		
+		System.out.println("이름\t1 2 3 4 5  점수");
+		for(Exam exam : exams) {
+			
+			System.out.print(exam.getName() + "\t");
+			for(char c : exam.getOx() ) {
+				System.out.print(c + " ");
+			} // inner enhanced for
+			System.out.println("  " + exam.getScore());
+			
+		} // enhanced for
 		
 
 	} // main

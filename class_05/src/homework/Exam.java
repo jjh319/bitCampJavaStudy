@@ -1,10 +1,60 @@
 package homework;
 
-
+import java.util.Scanner;
 
 public class Exam {
 
+	Scanner sc = new Scanner(System.in);
 	
+	private String name = null;
+	private String dap = null;
+	private char[] ox = null;
+	private int score = 0;
+	private final String JUNG="11111"; //상수화
+	
+	public Exam() {
+		
+		System.out.print("이름 입력 : ");
+		name = sc.nextLine();
+		System.out.print("답 입력 : ");
+		dap = sc.nextLine();
+		System.out.println();
+		
+		ox = new char[5];
+		
+		compare();
+		
+	} // Constructor
+	
+	
+	public void compare() {
+		
+		for(int i=0; i<ox.length; i++) {
+			
+			if(dap.charAt(i) == JUNG.charAt(i)) {
+				ox[i] = 'O';
+				score += 20; 
+			} else {
+				ox[i] = 'X';
+			} // if-else
+			
+		} // for
+		
+	} // compare
+	
+	
+	
+	public String getName() {
+		return this.name;
+	} // getName
+	
+	public char[] getOx() {
+		return this.ox;
+	} // getOx
+	
+	public int getScore() {
+		return this.score;
+	} // getScore
 	
 } // end class
 

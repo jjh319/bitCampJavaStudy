@@ -35,6 +35,7 @@ public class ComputeMain {
 			
 		
 		System.out.println("X\tY\tSUM\tSUB\tMUL\tDIV");
+		System.out.println("--------------------------------------------------");
 		
 		for(int i=0; i<computes.length; i++) {
 			System.out.println(computes[i].getX() + "\t" + computes[i].getY() + "\t" + 

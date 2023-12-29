@@ -9,6 +9,7 @@ public class SalaryDTO {
 	private int extra;
 	private int total;
 	private int rate;
+	private double seyul;
 	private int salary;
 	
 	public String getName() {
@@ -31,6 +32,10 @@ public class SalaryDTO {
 		return this.total;
 	} // getTotal
 	
+	public double getSeyul() {
+		return this.seyul;
+	} // getSeyul
+	
 	public int getRate() {
 		return this.rate;
 	} // getRate
@@ -49,7 +54,16 @@ public class SalaryDTO {
 	
 	public void calc() {
 		total = basic + extra;
-		rate = (int) ( total >= 5000000 ? total*0.03 : ( total >= 3000000 ? (total*0.02) : (total*0.01) ) );
+		
+		if(total >= 5000000) {
+			seyul = 0.03;
+		} else if(total >= 3000000) {
+			seyul = 0.02;
+		} else {
+			seyul = 0.01;
+		} // if-else if-else
+		
+		rate = (int) (total * seyul);
 		salary = total - rate;
 	} // calc
 	

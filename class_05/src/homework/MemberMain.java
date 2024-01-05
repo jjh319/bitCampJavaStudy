@@ -3,13 +3,19 @@ package homework;
 
 public class MemberMain {
 
-	
-	public static void main(String[] args) {
-		
-		MemberService service = new MemberService();
-		service.menu();
+   
+   public static void main(String[] args) {
+      
+      
+      MemberService service = new MemberService();
+      
+      while(service.isEnd()) {
+         service.menu();
+         
+      } // while
 
-	} // main
+      
+   } // main
 
 } // end class
 
@@ -48,12 +54,12 @@ insert()
 
 [2번 경우]
 list()
-이름		나이		핸드폰		주소
+이름      나이      핸드폰      주소
 
 [3번 경우]
 update()
 핸드폰 번호 입력 : 010-123-1234
-홍길동		25		xxx		xxx
+홍길동      25      xxx      xxx
 
 수정 할 이름 입력 : 
 수정 할 핸드폰 입력 : 

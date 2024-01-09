@@ -26,7 +26,7 @@ public class BookPrint implements Book{
             + entry.getKey().getAuthor() + "\t\t" + entry.getKey().getPrice() + "\t\t" 
             + entry.getValue() + "\t\t" + (entry.getKey().getPrice() * entry.getValue()));
         } // enhanced for
-		
+        
 		
 	} // exeCute
 

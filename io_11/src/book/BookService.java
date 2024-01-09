@@ -27,24 +27,24 @@ public class BookService {
 		
 		if(num == 1) {
 			book = new BookInsert();
-			book.exeCute(bookList);
+			
 		} else if(num == 2) {
 			book = new BookPrint();
-			book.exeCute(bookList);
+			
 		} else if(num == 3) {
 			book = new BookFileWrite();
-			book.exeCute(bookList);
+			
 		} else if(num == 4) {
 			book = new BookFileRead();
-			book.exeCute(bookList);
+			
 		} else if(num == 5) {
 			book = new BookTitleDesc();
-			book.exeCute(bookList);
+			
 		} else if(num == 6) {
 			this.end = false;
 		} // if-else if
 		
-		
+		book.exeCute(bookList);
 	} // menu
 	
 	

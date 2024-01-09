@@ -12,7 +12,14 @@ public class BookFileRead implements Book{
 		
 		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("book.txt"));
 		
-		BookDTO dto = (BookDTO) ois.readObject();
+		ArrayList<BookDTO> readList = (ArrayList<BookDTO>) ois.readObject();
+		
+		ois.close();
+		
+		for (BookDTO book : readList) {
+			System.out.println(book.toString());
+		} // for
+		
 		
 	} // exeCute
 

@@ -1,8 +1,11 @@
 package book;
 
+import java.io.Serializable;
+import java.util.Objects;
 
-public class BookDTO {
-
+public class BookDTO implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
 	private String code;         // 코드
 	private String title;     // 제목
 	private String author;    // 저자
@@ -13,6 +16,8 @@ public class BookDTO {
 	
 	
 	
+	
+
 	public String getCode() {
 		return code;
 	}
@@ -60,6 +65,27 @@ public class BookDTO {
 	public void setTotal(int total) {
 		this.total = total;
 	}
+	
+	
+	@Override
+	public String toString() {
+		return "code : " + code + ", title : " + title + ", author : " +
+				author + ", price : " + price + ", qty : " + qty;
+	} // toString
+	
+	@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BookDTO bookDTO = (BookDTO) o;
+        return code.equals(bookDTO.code) && title.equals(bookDTO.title) && author.equals(bookDTO.author);
+    } // equals
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(code, title, author);
+    } // hashCode
+	
 	
 	
 } // end class

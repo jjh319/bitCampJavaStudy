@@ -6,17 +6,17 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class InsertMain {
+public class UpdateMain {
 
 	private Connection conn;
-	private PreparedStatement pstmt;  // 가이드
+	private PreparedStatement pstmt;
 	
 	private String driver = "oracle.jdbc.driver.OracleDriver";
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	private String userName = "c##java";
 	private String password = "1234";
-	
-	public InsertMain() {
+
+	public UpdateMain() {
 		// Driver Loading
 		try {
 			Class.forName(driver);
@@ -28,8 +28,9 @@ public class InsertMain {
 	} // Constructor
 	
 	public void getConnection() {
+		
 		try {
-			conn = DriverManager.getConnection(url, userName, password);
+			conn = DriverManager.getConnection(url,userName,password);
 			System.out.println("Connection Success");
 		} catch(SQLException e) {
 			e.printStackTrace();
@@ -37,34 +38,17 @@ public class InsertMain {
 		
 	} // getConnection
 	
-	public void insertArticle() {
+	public void updateArticle() {
 		this.getConnection(); // 접속
 		
-		//데이터
-		Scanner sc = new Scanner(System.in);
-		System.out.print("이름 입력 : ");
-		String name = sc.next();
-		
-		System.out.print("나이 입력 : ");
-		int age = sc.nextInt();
-		
-		System.out.print("키 입력 : ");
-		double height = sc.nextDouble();
-		
-		
 		try {
-			String sql = "insert into dbtest(name, age, height, logtime) VALUES(?, ?, ?, sysdate) ";
+			String sql = "UPDATE dbtest SET age=age+1, height=height+1 WHERE name LIKE '%홍%' ";
 			
 			pstmt = conn.prepareStatement(sql);
 			
-			// ?에 데이터 입력
-			pstmt.setString(1, name);
-			pstmt.setInt(2, age);
-			pstmt.setDouble(3, height);
-			
 			int su = pstmt.executeUpdate();  // 실행
 			
-			System.out.println(su +" 개의 행이 만들어졌습니다.");
+			System.out.println(su +" 개의 행이 업데이트 되었습니다.");
 		} catch(SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -77,13 +61,15 @@ public class InsertMain {
 			
 		} // finally
 		
-	} // insertArticle
-	
-	
-	public static void main(String[] args)  {
-		InsertMain insertMain = new InsertMain();
-		insertMain.insertArticle();
 		
+	} // updateArticle
+	
+
+	public static void main(String[] args) {
+		UpdateMain updateMain = new UpdateMain();
+		updateMain.updateArticle();
+		
+
 	} // main
 
 } // end class
